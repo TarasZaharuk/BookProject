@@ -1,10 +1,13 @@
-﻿namespace BookProject
+﻿
+namespace BookProject
 {
     public class Book
     {
         private int? _rating;
-        private const int _countOfSymbolsPerPage = 200;
-        private List<Page> pages = new List<Page>();
+        private const int _countOfSymbolsPerPage = 1000;
+        private int _countOfSymbolsInWordsPerPage;
+        private int _numberOfWord;
+        private List<Page> _pages = new List<Page>();
         public Book(string name, string text, string author, DateOnly dateOfPublishing)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -39,26 +42,27 @@
         public string GetInfo() => $"{Name}-{Author}-{DateOfPublishing.Year}";
         private void InnitPages(string text)
         {
-            int countOfPage = Convert.ToInt16(Math.Ceiling((double)text.Length / _countOfSymbolsPerPage));
-            for (int i = 0; i < countOfPage; i++)
+            do
             {
-                pages.Add(new Page
+                if (text.Length < _countOfSymbolsPerPage)
                 {
-                    Index = i,
-                    Text = new string(text.Skip(i * _countOfSymbolsPerPage).Take(_countOfSymbolsPerPage).ToArray()),
-                });
-            }
-
+                    _pages.Add(new Page { Text = text });
+                    break;
+                }
+                int firstSpaceIndex = text.AsSpan().Slice(0, _countOfSymbolsPerPage).LastIndexOf(' ');
+                _pages.Add(new Page { Text = new string(text.Take(firstSpaceIndex).ToArray()) });
+                text = text.Remove(0, firstSpaceIndex);
+            } while (text.Length != 0);
         }
-        public int CountOfPages { get { return pages.Count; } }
+        public int CountOfPages { get { return _pages.Count; } }
 
         public string GetText(int index)
         {
-            if (index < pages.Count)
+            if (index < _pages.Count)
             {
-                return pages[index].Text;
+                return _pages[index].Text;
             }
-            return $"Index must be from {0} to {pages.Count - 1} ";
+            return $"Index must be from {0} to {_pages.Count - 1} !";
         }
     }
 }
