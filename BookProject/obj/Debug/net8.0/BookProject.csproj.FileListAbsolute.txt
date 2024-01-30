@@ -1,0 +1,15 @@
+C:\Users\taras\source\repos\BookProject\BookProject\bin\Debug\net8.0\BookProject.exe
+C:\Users\taras\source\repos\BookProject\BookProject\bin\Debug\net8.0\BookProject.deps.json
+C:\Users\taras\source\repos\BookProject\BookProject\bin\Debug\net8.0\BookProject.runtimeconfig.json
+C:\Users\taras\source\repos\BookProject\BookProject\bin\Debug\net8.0\BookProject.dll
+C:\Users\taras\source\repos\BookProject\BookProject\bin\Debug\net8.0\BookProject.pdb
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.AssemblyInfoInputs.cache
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.AssemblyInfo.cs
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.csproj.CoreCompileInputs.cache
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.dll
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\refint\BookProject.dll
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.pdb
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.genruntimeconfig.cache
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\ref\BookProject.dll
+C:\Users\taras\source\repos\BookProject\BookProject\obj\Debug\net8.0\BookProject.sourcelink.json
